@@ -248,7 +248,6 @@ int update_meminfo(void) {
     curmem -= curbufmem;
     cureasyfree += curbufmem;
 #else
-#   curmem = info.memmax - memavail;
     /* The memory available field is describe in /proc man page as :
      * "An estimate of how much memory is available for starting new applications, without swapping."
      * We can see in page_alloc.c in the linux kernel that :
